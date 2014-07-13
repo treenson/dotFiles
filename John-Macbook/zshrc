@@ -1,0 +1,74 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+export ZSH_THEME="prose"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want disable red dots displayed while waiting for completion
+# DISABLE_COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git brew git-flow mysql-macports npm osx sublime)
+
+source $ZSH/oh-my-zsh.sh
+
+
+# ADD By Goznauk 140226
+# Play safe!
+alias 'rm=rm -i'
+alias 'rmdir=rm -rfi'
+alias 'mv=mv -i'
+alias 'cp=cp -i'
+
+# Typing errors...
+alias 'cd..=cd ..'
+
+# Convinence
+alias 'l=ls -F'
+alias 'la=ls -AF'
+alias 'lal=ls -alF'
+alias 'v=vim'
+
+
+alias 'aws=ssh -i Goznauk_key.pem ubuntu@54.199.239.89'
+
+# For Easy GCC Compile
+compile_c () {     
+   gcc $1 -o ${1%.*}
+};
+alias -s c=compile_c
+
+# For Easy C Sharp Compile
+compile_csharp () {     
+   gmcs $1
+};
+alias -s cs=compile_csharp
+
+# For Easy monono execution
+execute_mono () {     
+   mono $1
+};
+alias -s exe=execute_mono
+
+## z.sh
+#. /usr/bin/z.sh
+
+
+# Customize to your needs...
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/goznauk/bin
